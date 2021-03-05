@@ -1,0 +1,11 @@
+{
+  "name": "mern-blog-api",
+  "version": "1.0.0",
+  "description": "REST API for MERN blog with nodejs",
+  "main": "index.js",
+  "author": "Rudi Kurniawan",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
