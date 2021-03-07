@@ -16,5 +16,13 @@ exports.getProducts = (req, res, next) => {
       }
     ]
   })
-  // next()
+  next()
+}
+
+exports.createProduct = (req, res, next) => {
+  res.json({
+    name: req.name,
+    material: req.material,
+    price: req.price
+  })
 }

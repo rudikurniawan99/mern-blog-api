@@ -1,0 +1,48 @@
+/** Standart Status Response **/
+200 - OK                      => Call API success
+201 - CREATED                 => POST success
+400 - BAD REQUEST             => error on client side 
+401 - UNAUTHORIZED            => user not authorized to the request
+403 - FORBIDDEN               => user not allowed to the request 
+404 - NOT FOUND               => request endpoint not found
+500 - INTERNAL SERVER ERROR   => error on server side
+502 - BAD GATEWAY             => invalid response from another request
+
+
+/** Standart API **/
+
+{root.api}/{version}/{grouping}/{endpoint}
+SAMPLE : sinaukode.com/v1/auth/login
+
+GROUP : Authentication
+[1] register
+{root.api}/{version}/auth/register
+
+req: {
+  "name": "test"
+  "email": "testapi@gmail.com"
+  "password": "123456"
+}
+
+res: {
+  "message": "Successfully create blog",
+  "data": {
+    "id": 1,
+    "name": "test",
+    "email": "testapi@gmail.com"
+    "password": "123456"
+  }
+}
+
+error-response: {
+  "message": 
+}
+
+
+[2] login
+
+GROUP : Blog
+[1] create blog
+[2] get blog
+[3] update blog
+[4] delete blog
