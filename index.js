@@ -1,11 +1,12 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 4000
 
-app.get('/', (req, res) => {
-  res.send('Hello Cuk')
-})
+//declare products routes
+const productsRoutes = require('./src/routes/products')
 
-app.listen(port, () => {
-  console.log('Ini udah jalan cong');
-})
+
+//use products routes
+app.use('/', productsRoutes)
+
+app.listen(port)
