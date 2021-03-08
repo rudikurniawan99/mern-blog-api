@@ -25,7 +25,7 @@ req: {
 }
 
 res: {
-  "message": "Successfully create blog",
+  "message": "Successfully create user",
   "data": {
     "id": 1,
     "name": "test",
@@ -43,6 +43,33 @@ error-response: {
 
 GROUP : Blog
 [1] create blog
+{root.api}/{version}/blog/post
+
+req: {
+  "title": "lorem",
+  "image": "image.jpg",
+  "body": "lorem ipsum sit dolor amet ija la"
+}
+
+res: {
+  "message": "Successfully create blog",
+  "data": {
+    "id": 1,
+    "title": "lorem",
+    "image": "image.jpg",
+    "body": "lorem ipsum sit dolor amet ija la",
+    "created_at": "08/06/2021",
+    "author": {
+      "id": 1,
+      "name": "Rudi Kurniawan"
+    }
+  }
+}
+
+error-response: 
+- 201 -> Successfully create blog
+- 400 -> Data that you just input is invalid
+
 [2] get blog
 [3] update blog
 [4] delete blog

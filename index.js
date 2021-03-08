@@ -4,8 +4,8 @@ const port = 4000
 const bodyParser = require('body-parser')
 
 //declare products routes
-const productsRoutes = require('./src/routes/products')
 const authRoutes = require('./src/routes/auth')
+const blogRoutes = require('./src/routes/blog')
 
 //use body parser to handle route request
 app.use(bodyParser.json())
@@ -23,7 +23,7 @@ app.use((req, res, next) => {
 
 
 //group routing
-app.use('/v1/', productsRoutes)
 app.use('/v1/auth/', authRoutes)
+app.use('/v1/blog', blogRoutes)
 
 app.listen(port)
